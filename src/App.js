@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Scanner from "./components/lib/Qr";
 import ProductDetails from "./components/ProductDetails";
-import logo from "./logo.svg";
 import "./App.scss";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<ProductDetails />} />
+        <Route exact path="/product-detail" element={<ProductDetails />} />
+        <Route exact path="/" element={<Scanner />} />
       </Routes>
     </Router>
   );
