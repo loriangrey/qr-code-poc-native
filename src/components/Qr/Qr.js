@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import CameraArea from "./Camera";
+import CameraArea from "../lib/Camera";
 import "./Qr.scss";
 
 export default function Scanner() {
