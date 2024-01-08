@@ -1,15 +1,19 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductDetails from "./components/ProductDetails";
-import logo from "./logo.svg";
 import "./App.scss";
+import "./index.scss";
+import Glossary from "./components/Glossary/Glossary";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<ProductDetails />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<ProductDetails />} />
+          <Route exact path="/glossary" element={<Glossary />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

@@ -1,0 +1,16 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: navy;
+  color: #fff;
+
+  .arrow-icon {
+    color: white;
+  }
+
+  h1 {
+    margin-left: 1rem;
+    font-size: 20px;
+  }
+}
