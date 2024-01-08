@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ProductDetails from "./components/ProductDetails";
+import ProductDetails from "./components/Product/ProductDetails";
 import Glossary from "./components/Glossary/Glossary";
+import Scanner from "./components/Qr/Qr";
 
 function App() {
   return (

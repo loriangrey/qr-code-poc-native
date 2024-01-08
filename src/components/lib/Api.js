@@ -3,7 +3,9 @@ import React from "react";
 const Api = () => {
   return (
     <>
-      <div style={{ marginLeft: "2rem", marginRight: "2rem" }}>
+      <div
+        style={{ marginLeft: "2rem", marginRight: "2rem", marginTop: "2rem" }}
+      >
         <h3>GHG Footprint</h3>
         <p>
           Greenhouse gas or GHG emissions are defined as gas-base air pollution
