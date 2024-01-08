@@ -1,0 +1,117 @@
+.scanner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.scanner-blured-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../public/images/qr-bg.jpeg);
+  background-size: contain;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.scanner-advise-block {
+  width: 100%;
+  margin: 30px 0;
+  padding: 15px 0;
+  border-radius: 5px;
+  font-weight: 700;
+  background: #ccc;
+  text-align: center;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.scanner-camera-area {
+  width: 100%;
+  --s: 70px; /* the size on the corner */
+  --t: 3px; /* the thickness of the border */
+  --g: 15px; /* the gap between the border and image */
+
+  padding: calc(var(--g) + var(--t));
+  outline: var(--t) solid #003aa1; /* the color here */
+  outline-offset: calc(-1 * var(--t));
+  -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+      calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
+  border-radius: 20px;
+}
+
+.scanner-page {
+  display: flex;
+  width: 100%;
+}
+
+.scanner-camera-area-active {
+  outline: var(--t) solid #b38184;
+  animation: pulse-animation 0.3s 3 ease-in-out;
+}
+
+.camera-frame {
+  height: 250px;
+
+  video {
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.scanner-button-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-weight: 700;
+
+  .scanner-button-couple {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .scanner-button {
+      width: 35px;
+      height: 35px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      color: #000;
+      background: #ccc;
+    }
+
+    .scanner-button1 {
+      margin-right: 10px;
+    }
+  }
+
+  .scanner-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #000;
+    background: #ccc;
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    --t: 3px;
+    outline: var(--t) solid #b38184;
+  }
+  100% {
+    --t: 6px;
+    outline: var(--t) solid #003aa1;
+  }
+}

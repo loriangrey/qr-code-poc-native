@@ -15,7 +15,12 @@
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
     "sass": "^1.69.7",
+<<<<<<< HEAD
     "sass-loader": "^13.3.3",
+=======
+    "@zxing/browser": "0.1.1",
+    "@zxing/library": "0.19.1",
+>>>>>>> ae7758a3cb5e19baf7c32e71ec556f50ca54b5d8
     "web-vitals": "^2.1.4"
   },
   "scripts": {

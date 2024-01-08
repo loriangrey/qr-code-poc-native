@@ -1,0 +1,122 @@
+.product-details-wrapper {
+  width: 100%;
+}
+
+.product-details-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 225px;
+  background: #13a0fe;
+}
+
+.product-details-header-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 20px 0;
+
+  .product-details-header-button-left {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background: #03106f;
+  }
+
+  .product-details-header-button-right {
+    width: 35px;
+    height: 35px;
+    margin-right: 40px;
+    border-radius: 20px;
+    background: #03106f;
+  }
+
+  .product-details-header-button-left,
+  .product-details-header-button-right {
+    cursor: pointer;
+  }
+}
+
+.product-details-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: -50px 20px 0;
+}
+
+.product-details-main-data-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 460px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details-main-data-box-title {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  background: #f2f2f2;
+
+  h4 {
+    margin-left: 20px;
+  }
+}
+
+.product-details-header-titles-wrapper {
+  margin: 30px 20px 0;
+  color: #fff;
+}
+
+.product-details-main-data-box-content-normal-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .product-details-main-data-box-content-double-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 10% 0 20px;
+  }
+}
+
+.product-details-main-data-box-content-wide-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .product-details-main-data-box-content-double-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px 0;
+  }
+
+  .product-details-main-data-box-content-item--info {
+    width: 20px;
+    height: 20px;
+    align-self: end;
+    margin-right: 20px;
+    border-radius: 20px;
+    background: #03106f;
+    text-align: center;
+    cursor: pointer;
+
+    .product-details-main-data-box-content-item--info_text {
+      position: relative;
+      color: #fff;
+    }
+  }
+}
+
+.product-details-main-data-box-content-marquee {
+  margin: 15px 20px 0;
+  border: 1px solid #ccc;
+  opacity: 0.5;
+}
