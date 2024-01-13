@@ -88,8 +88,9 @@
 
 .product-details-main-data-box-title {
   display: flex;
-  height: 50px;
   align-items: center;
+  height: 100%;
+  padding: 10px 0;
   border-radius: 8px 8px 0 0;
   background: #f2f2f2;
 
@@ -144,6 +145,7 @@
   .product-details-main-data-box-content-icon-item {
     display: flex;
     width: 150px;
+    min-height: 75px;
   }
 }
 
@@ -185,8 +187,41 @@
   }
 }
 
+.product-details-main-data-box-content-item--value {
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .product-details-main-data-box-content-marquee {
   margin: 15px 20px 0 75px;
   border: 1px solid #ccc;
   opacity: 0.5;
+}
+
+.product-details-main-data-box-country-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+  .product-details-main-data-box-country-wrapper-flag-title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 15px 25px;
+  }
+  .product-details-main-data-box-country-wrapper-title-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-details-main-data-box-country-wrapper-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .product-details-main-data-box-country-wrapper-subtitle {
+    font-size: 12px;
+  }
 }

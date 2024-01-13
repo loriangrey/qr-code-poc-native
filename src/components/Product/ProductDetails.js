@@ -11,6 +11,7 @@ import Renewable from "../Icons/Renewable";
 import Unstressed from "../Icons/Unstressed";
 import Waste from "../Icons/Waste";
 import Factory from "../Icons/Factory";
+import Indonesia from "../Icons/Indonesia";
 
 import "./ProductDetails.scss";
 
@@ -58,7 +59,7 @@ const ProductDetails = () => {
                   <h6 className="product-details-main-data-box-content-item">
                     GHG Footprint
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
                     46% UoM
                   </h6>
                 </div>
@@ -80,7 +81,7 @@ const ProductDetails = () => {
                 <h6 className="product-details-main-data-box-content-item">
                   GHG Footprint
                 </h6>
-                <h6 className="product-details-main-data-box-content-item">
+                <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
                   54% UoM
                 </h6>
               </div>
@@ -91,7 +92,7 @@ const ProductDetails = () => {
                 <h6 className="product-details-main-data-box-content-item">
                   GHG Footprint
                 </h6>
-                <h6 className="product-details-main-data-box-content-item">
+                <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
                   36% UoM
                 </h6>
               </div>
@@ -104,7 +105,7 @@ const ProductDetails = () => {
                   <h6 className="product-details-main-data-box-content-item">
                     Sustainably Sourced Material
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
                     30%
                   </h6>
                 </div>
@@ -140,7 +141,7 @@ const ProductDetails = () => {
                   <h6 className="product-details-main-data-box-content-item">
                     Plastic
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
                     60%
                   </h6>
                 </div>
@@ -154,7 +155,7 @@ const ProductDetails = () => {
                   <h6 className="product-details-main-data-box-content-item">
                     Cardboard
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
                     100%
                   </h6>
                 </div>
@@ -164,20 +165,33 @@ const ProductDetails = () => {
 
           <div className="product-details-main-data-box-wrapper">
             <div className="product-details-main-data-box-title">
-              <h5>Where was it made</h5>
+              <div className="product-details-main-data-box-country-wrapper">
+                <h5>Where was it made</h5>
+                <div className="product-details-main-data-box-country-wrapper-flag-title">
+                  <Indonesia />
+                  <div className="product-details-main-data-box-country-wrapper-title-wrapper">
+                    <div className="product-details-main-data-box-country-wrapper-title">
+                      PT Technopia Lever
+                    </div>
+                    <div className="product-details-main-data-box-country-wrapper-subtitle">
+                      Indonesia
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="product-details-main-data-box-content-normal-wrapper product-details-main-data-box-content-normal-wrapper--double-icon">
               <div className="product-details-main-data-box-content-icon-item">
                 <Renewable />
                 <div className="product-details-main-data-box-content-double-wrapper">
                   <h6 className="product-details-main-data-box-content-item">
-                    Recycled
+                    Renewable
                   </h6>
                   <h6 className="product-details-main-data-box-content-item">
-                    Plastic
+                    Energy Usage
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
-                    60%
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
+                    100%
                   </h6>
                 </div>
               </div>
@@ -185,12 +199,12 @@ const ProductDetails = () => {
                 <Unstressed />
                 <div className="product-details-main-data-box-content-double-wrapper">
                   <h6 className="product-details-main-data-box-content-item">
-                    Recycled
+                    Unstressed
                   </h6>
                   <h6 className="product-details-main-data-box-content-item">
-                    Cardboard
+                    Water Source
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
                     100%
                   </h6>
                 </div>
@@ -202,13 +216,13 @@ const ProductDetails = () => {
                 <Waste />
                 <div className="product-details-main-data-box-content-double-wrapper">
                   <h6 className="product-details-main-data-box-content-item">
-                    Recycled
+                    Waste
                   </h6>
                   <h6 className="product-details-main-data-box-content-item">
-                    Plastic
+                    to Landfill
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
-                    60%
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
+                    0%
                   </h6>
                 </div>
               </div>
@@ -216,13 +230,13 @@ const ProductDetails = () => {
                 <Factory />
                 <div className="product-details-main-data-box-content-double-wrapper">
                   <h6 className="product-details-main-data-box-content-item">
-                    Recycled
+                    Factory
                   </h6>
                   <h6 className="product-details-main-data-box-content-item">
-                    Cardboard
+                    Carbon Footprint
                   </h6>
-                  <h6 className="product-details-main-data-box-content-item">
-                    100%
+                  <h6 className="product-details-main-data-box-content-item product-details-main-data-box-content-item--value">
+                    46% MTco2e
                   </h6>
                 </div>
               </div>

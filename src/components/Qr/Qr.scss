@@ -119,10 +119,12 @@
     }
 
     &.scanner-button3 {
-      padding-left: 10px;
+      display: flex;
+      justify-content: space-evenly;
 
-      span {
-        padding-left: 10px;
+      > div {
+        font-size: 11px;
+        white-space: nowrap;
       }
     }
   }

@@ -49,9 +49,9 @@ export default function Scanner() {
               <span>1x</span>
             </div>
           </div>
-          <div className="scanner-button scanner-button3 ">
+          <div className="scanner-button scanner-button3">
             <FotoPlus />
-            <span>Upload from Gallery</span>
+            <div>Upload from Gallery</div>
           </div>
         </div>
       </div>
