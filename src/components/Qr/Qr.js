@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import CameraArea from "../lib/Camera";
+
+import NoFlash from "../Icons/NoFlash";
+import FotoPlus from "../Icons/FotoPlus";
 import "./Qr.scss";
 
 export default function Scanner() {
@@ -39,10 +42,17 @@ export default function Scanner() {
         </div>
         <div className="scanner-button-wrapper">
           <div className="scanner-button-couple">
-            <div className="scanner-button scanner-button1">O</div>
-            <div className="scanner-button">1x</div>
+            <div className="scanner-button scanner-button1">
+              <NoFlash />
+            </div>
+            <div className="scanner-button scanner-button2">
+              <span>1x</span>
+            </div>
           </div>
-          <div className="scanner-button">Upload from Gallery</div>
+          <div className="scanner-button scanner-button3 ">
+            <FotoPlus />
+            <span>Upload from Gallery</span>
+          </div>
         </div>
       </div>
       <div className="scanner-blured-bg"></div>
