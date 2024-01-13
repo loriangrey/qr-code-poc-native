@@ -21,13 +21,20 @@ const ProductDetails = () => {
     navigate("/glossary");
   };
 
+  const navigateBack = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <div className="product-details-wrapper">
         <div className="product-details-header-product-image"></div>
         <div className="product-details-header">
           <div className="product-details-header-buttons-wrapper">
-            <div className="product-details-header-button-left">
+            <div
+              className="product-details-header-button-left"
+              onClick={navigateBack}
+            >
               <BackArrow />
             </div>
             <div className="product-details-header-button-right">
