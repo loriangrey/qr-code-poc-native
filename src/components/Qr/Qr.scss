@@ -48,6 +48,7 @@
 
 .scanner-page {
   display: flex;
+  height: 288px;
   width: 100%;
   max-width: 400px;
 }
@@ -64,6 +65,15 @@
     border-radius: 10px;
     object-fit: cover;
   }
+}
+
+.camera-frame-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 10px;
+  background: #000;
 }
 
 .scanner-button-wrapper {

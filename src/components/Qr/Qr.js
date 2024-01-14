@@ -1,22 +1,35 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { ColorRing } from "react-loader-spinner";
+
 import CameraArea from "../lib/Camera";
 
 import NoFlash from "../Icons/NoFlash";
 import FotoPlus from "../Icons/FotoPlus";
+import { api, data } from "../lib/Api";
 import "./Qr.scss";
 
 export default function Scanner() {
   const navigate = useNavigate();
   const [QRDetectionColor, setQRDetectionColor] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleQRDetection = (result) => {
     setQRDetectionColor(result ? true : false);
     // TODO connect / call API with result url parameters
-    setTimeout(() => {
-      navigate("/product-detail");
-    }, 1000);
+    (async () => {
+      // const data = await api("1");
+      setTimeout(() => {
+        setIsLoading(true);
+      }, 1000);
+
+      await data().then((res) => {
+        setTimeout(() => {
+          navigate("/product-detail", { state: { ...res } });
+        }, 2000);
+      });
+    })();
   };
 
   console.log(QRDetectionColor);
@@ -36,7 +49,27 @@ export default function Scanner() {
             }`}
           >
             <div className="camera-frame">
-              <CameraArea onDetect={(result) => handleQRDetection(result)} />
+              {!isLoading ? (
+                <CameraArea onDetect={(result) => handleQRDetection(result)} />
+              ) : (
+                <div className="camera-frame-loading">
+                  <ColorRing
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="color-ring-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="color-ring-wrapper"
+                    colors={[
+                      "#CCCCCC",
+                      "#CCCCCC",
+                      "#CCCCCC",
+                      "#CCCCCC",
+                      "#CCCCCC",
+                    ]}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

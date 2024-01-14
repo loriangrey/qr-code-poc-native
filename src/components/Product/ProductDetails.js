@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import BackArrow from "../Icons/BackArrow";
 import Share from "../Icons/Share";
 import Info from "../Icons/Info";
@@ -17,6 +17,8 @@ import "./ProductDetails.scss";
 
 const ProductDetails = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
   const handleInfo = () => {
     navigate("/glossary");
   };

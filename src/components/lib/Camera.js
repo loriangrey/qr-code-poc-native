@@ -81,9 +81,11 @@ export default function Camera({
       .then((stream) => {
         currentStream = stream;
 
+        window.localStream = stream;
+
         BrowserQRCodeReader.addVideoSource(videoEl, currentStream);
       })
-      .then(() => {
+      .then((stream) => {
         return browserReader.decodeFromVideoElement(videoEl, (result, err) => {
           if (err) {
             if (err instanceof NotFoundException) {
@@ -120,7 +122,7 @@ export default function Camera({
       });
 
     return () => {
-      console.info("Matando...", currentStream);
+      console.info("Stream...", currentStream);
 
       clearInterval(checkInterval);
 
