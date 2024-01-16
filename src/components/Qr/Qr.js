@@ -24,7 +24,8 @@ export default function Scanner() {
         setIsLoading(true);
       }, 1000);
 
-      await data().then((res) => {
+      // await data().then((res) => {
+      await api("1").then((res) => {
         setTimeout(() => {
           navigate("/product-detail", { state: { ...res } });
         }, 2000);
