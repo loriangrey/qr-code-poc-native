@@ -107,7 +107,8 @@ export const api = async (productNumber) => {
         },
       }
     );
-    return await response.json();
+    const res = await response.json();
+    return res.product;
   } catch (error) {
     console.error("Error fetching from API gateway:", error);
   }

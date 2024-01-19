@@ -22,22 +22,22 @@ const Glossary = () => {
 
       <div>
         <>
-          {[state?.product?.glossary].map((item, i) => (
+          {state?.map((item, i) => (
             <div className="gloassary-list-container" key={i}>
               <h3>GHG Footprint</h3>
-              <p>{item.ghg_footprint}</p>
+              <p>{item.glossary.ghg_footprint}</p>
               <hr />
               <h3>Ingredients GHG Footprint</h3>
-              <p>{item.ingredients_ghg_footprint}</p>
+              <p>{item.glossary.ingredients_ghg_footprint}</p>
               <hr />
               <h3>Packaging GHG Footprint</h3>
-              <p>{item.packaging_ghg_footprint}</p>
+              <p>{item.glossary.packaging_ghg_footprint}</p>
               <hr />
               <h3>Recycled Plastic</h3>
-              <p>{item.recycled_plastic}</p>
+              <p>{item.glossary.recycled_plastic}</p>
               <hr />
               <h3>Sustainably Sourced Material</h3>
-              <p>{item.sustainably_sourced_material}</p>
+              <p>{item.glossary.sustainably_sourced_material}</p>
               <hr />
             </div>
           ))}
